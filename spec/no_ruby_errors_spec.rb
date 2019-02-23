@@ -10,7 +10,7 @@ describe "Not having any errors and being all green" do
 
   context 'SyntaxError' do
     it 'raises a SyntaxError for nonsensical code' do
-      expect{"is the loneliest number"
+      expect{
         load ./lib/a_syntax_error.rb
       }.to_not raise_error
     end
@@ -18,7 +18,7 @@ describe "Not having any errors and being all green" do
 
   context 'TypeError' do
     it 'raises a TypeError for objects of the wrong type' do
-      expect{
+      expect{"is the loneliest number"
         load ./lib/a_type_error.rb
       }.to_not raise_error
     end
